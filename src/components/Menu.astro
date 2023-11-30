@@ -1,0 +1,192 @@
+---
+
+---
+
+<div class="menu">
+    <input
+        name="input-menu"
+        id="input-menu"
+        class="input-menu"
+        type="checkbox"
+    />
+    <label class="btn-menu" for="input-menu">
+        <span class="menu-span-1"></span>
+        <span class="menu-span-2"></span>
+        <span class="menu-span-3"></span>
+    </label>
+    <!-- Sidebar content -->
+    <aside class="sidebar"></aside>
+    <!-- Sidebar icons -->
+    <div class="icons text-center" style="position: fixed; bottom: 0;">
+        <a href="" class="icon-container">
+            <div class="icon-img-container">
+                <img class="img" src="./images/icons/map.png" />
+            </div>
+            <div class="icon-text-container">
+                <span>TEXTO</span>
+            </div>
+        </a>
+    </div>
+    <!-- <a href="" class="icon-container">
+            <div>
+                <div class="icon-img-container">
+                    <img class="img" src="./images/icons/map.png" />
+                </div>
+                <div class="icon-text-container">
+                    <span>TEXTO</span>
+                </div>
+            </div>
+        </a>
+        <a href="" class="icon-container">
+            <div>
+                <div class="icon-img-container">
+                    <img class="img" src="./images/icons/map.png" />
+                </div>
+                <div class="icon-text-container">
+                    <span>TEXTO</span>
+                </div>
+            </div>
+        </a>
+        <a href="#section1" class="icon-container-top">
+            <div>
+                <span class="top_txt">TOP</span>
+                <span class="top_arrow"></span>
+            </div>
+        </a> -->
+</div>
+
+<style>
+    /* Estilos para el encabezado */
+    .img {
+        width: 33px;
+        height: 33px;
+    }
+
+    /* Estilos para el menú */
+    .menu {
+        position: relative;
+        background-color: #38081b;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 66px;
+        height: 100%;
+        z-index: 10;
+    }
+
+    /* Estilos para el input del menú */
+    .input-menu {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+        display: none;
+    }
+
+    .input-menu:checked ~ .btn-menu span:nth-child(1) {
+        rotate: 45deg;
+        transform: translate(4px, 3px);
+    }
+
+    .input-menu:checked ~ .btn-menu span:nth-child(2) {
+        rotate: -45deg;
+        transform: translate(4px, -3px);
+        width: 24px;
+    }
+
+    .input-menu:checked ~ .btn-menu span:nth-child(3) {
+        opacity: 0;
+    }
+
+    .btn-menu {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: absolute;
+        gap: 8px;
+        z-index: 2;
+        cursor: pointer;
+        margin-top: 35px;
+        right: 21px;
+        z-index: 3;
+    }
+
+    .btn-menu span {
+        background-color: white;
+        height: 2px;
+        width: 24px;
+        transition: 500ms all;
+        transform-origin: center;
+    }
+
+    .btn-menu span:nth-child(2) {
+        height: 2px;
+        width: 18px;
+    }
+
+    /* ICONOS */
+
+    .icons {
+        width: 66px;
+    }
+
+    .icon-container {
+        height: 66px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .icon-container div {
+        position: absolute;
+        height: 66px;
+        width: 150px;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 
+    .icons .icon-container div {
+        display: flex;
+        position: absolute;
+        width: 230px;
+        padding-left: 21px;
+        font-size: 22px;
+        font-weight: 200;
+        background-color: var(--main-bg-color);
+        right: 0;
+        transition: all 300ms;
+        transform: translateX(164px);
+    } */
+
+    .icon-img-container {
+        width: 66px;
+        height: 66px;
+    }
+
+    .icon-text-container {
+        color: black;
+    }
+
+    .icons .icon-container div span {
+        margin-left: 33px;
+    }
+
+    /* .icon-container:hover div {
+        transform: translateX(-100);
+    }
+
+    .icon-container div span {
+        position: absolute;
+        padding-left: 60px;
+        transition: all 300ms;
+    }
+
+    .icon-container:hover div span {
+        padding-left: 40px;
+        animation: hoverIcon 300ms;
+    } */
+</style>
